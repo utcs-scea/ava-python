@@ -1,0 +1,5 @@
+build
+worker
+guestlib
+*.so
+cmd_channel.c

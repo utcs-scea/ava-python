@@ -1,0 +1,35 @@
+Python Remoting
+===============
+
+## TO FIX
+
+The connection between guestlib and worker channel does not work.
+
+## Generate channel wrappers (in both guest and host)
+
+```bash
+cd $(AVA_ROOT)/common/python
+./generate.sh
+```
+
+## Install hacked [abseil package](https://github.com/yuhc/abseil-py)
+
+## Link OSV Usetl library to system directory
+
+```bash
+sudo ln -s $(AVA_ROOT)/guestlib/build/libusetl_device.so /usr/lib/
+```
+
+## Start manager
+
+```bash
+cd $(AVA_ROOT)/worker/py
+sudo -E ./manager.py
+```
+
+## Run demo
+
+```bash
+cd $(AVA_ROOT)/guestlib/python
+python exp.py
+```
